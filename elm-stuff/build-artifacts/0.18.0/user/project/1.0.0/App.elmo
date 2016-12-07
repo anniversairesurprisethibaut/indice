@@ -1,0 +1,81 @@
+var _user$project$App$subscriptions = function (model) {
+	return _elm_lang$core$Platform_Sub$none;
+};
+var _user$project$App$update = F2(
+	function (msg, model) {
+		var _p0 = msg;
+		return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
+	});
+var _user$project$App$displayImages = function (imagesUrls) {
+	return A2(
+		_elm_lang$core$List$map,
+		function (url) {
+			return A2(
+				_elm_lang$html$Html$li,
+				{ctor: '[]'},
+				{
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$img,
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$src(url),
+							_1: {ctor: '[]'}
+						},
+						{ctor: '[]'}),
+					_1: {ctor: '[]'}
+				});
+		},
+		imagesUrls);
+};
+var _user$project$App$allImages = {
+	ctor: '::',
+	_0: 'https://res.cloudinary.com/dpbanxukp/image/upload/v1481046333/sxk81wgbhcrjwouiteqd.png',
+	_1: {
+		ctor: '::',
+		_0: 'https://res.cloudinary.com/dpbanxukp/image/upload/v1481046332/kfk5qzyzavomixtunhlb.png',
+		_1: {
+			ctor: '::',
+			_0: 'https://res.cloudinary.com/dpbanxukp/image/upload/v1481046332/t9mhlmco7nnpdxvcm1pt.png',
+			_1: {
+				ctor: '::',
+				_0: 'https://res.cloudinary.com/dpbanxukp/image/upload/v1481046331/uxhrat1v3adha22u8opv.png',
+				_1: {
+					ctor: '::',
+					_0: 'https://res.cloudinary.com/dpbanxukp/image/upload/v1481046331/ylkyym5gphg2qbregr96.png',
+					_1: {
+						ctor: '::',
+						_0: 'https://res.cloudinary.com/dpbanxukp/image/upload/v1481046330/eo0soxlut0aad5nrimq7.png',
+						_1: {
+							ctor: '::',
+							_0: 'https://res.cloudinary.com/dpbanxukp/image/upload/v1481046329/bw4yyvptnssedzpt5mbo.png',
+							_1: {
+								ctor: '::',
+								_0: 'https://res.cloudinary.com/dpbanxukp/image/upload/v1481046328/pakqyjhhsgf0d6hrczne.png',
+								_1: {
+									ctor: '::',
+									_0: 'https://res.cloudinary.com/dpbanxukp/image/upload/v1481046328/c57cdnssxk0r8tzz8812.png',
+									_1: {
+										ctor: '::',
+										_0: 'https://res.cloudinary.com/dpbanxukp/image/upload/v1481046327/p5m4m5xiuggzqipqdddk.png',
+										_1: {ctor: '[]'}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+};
+var _user$project$App$view = function (model) {
+	return A2(
+		_elm_lang$html$Html$ul,
+		{ctor: '[]'},
+		_user$project$App$displayImages(_user$project$App$allImages));
+};
+var _user$project$App$init = {ctor: '_Tuple2', _0: 'Hello', _1: _elm_lang$core$Platform_Cmd$none};
+var _user$project$App$main = _elm_lang$html$Html$program(
+	{init: _user$project$App$init, update: _user$project$App$update, view: _user$project$App$view, subscriptions: _user$project$App$subscriptions})();
+var _user$project$App$NoOp = {ctor: 'NoOp'};
